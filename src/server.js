@@ -1,26 +1,33 @@
 import "dotenv/config";
 import express from "express";
+import mongoose from "mongoose";
 import authRouter from "./routes/auth_routes.js";
 import courseRouter from "./routes/course_routes.js";
 
-async function main() {
-  const app = express();
-  const PORT = process.env.PORT || 3001;
+mainServer(); //server start point
 
+async function mainServer() {
+  const app = express(); // Create an Express app
+  const PORT = process.env.PORT || 3001; // Set the port
+
+  // Middleware to parse the request body as JSON
   app.use(express.json());
 
+  // Register the routers for the app
   app.use(courseRouter.path, courseRouter);
   app.use(authRouter.path, authRouter);
 
-  // mongoose
-  //   .connect(process.env.MONGO_URL)
-  //   .then(() => {
-  //     console.log("Connected to MongoDB");
-  //   })
-  //   .catch((error) => {
-  //     console.log("Error occurred while connecting to MongoDB", error);
-  //   });
+  // Connect to MongoDB
+  mongoose
+    .connect(process.env.MONGO_URL)
+    .then(() => {
+      console.log("Connected to MongoDB");
+    })
+    .catch((error) => {
+      console.log("Error occurred while connecting to MongoDB", error);
+    });
 
+  // Start the server
   app.listen(PORT, (error) => {
     if (!error)
       console.log(
@@ -29,5 +36,3 @@ async function main() {
     else console.log("Error occurred, server can't start", error);
   });
 }
-
-main(); //server start point
