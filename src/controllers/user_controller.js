@@ -73,9 +73,17 @@ const userController = {
 
       await newUser.save();
 
+      // Generate JWT token after successful signup
+      const token = jwt.sign(
+        { id: newUser._id, username: newUser.username, role: newUser.role },
+        process.env.JWT_SECRET, // Ensure you have a secret key in your environment variables
+        { expiresIn: "1y" } // Token expires in 1 year
+      );
+
       res.status(201).send({
         message: "User signed up successfully",
         user: { username, email, role, authType },
+        token, // Return the token
       });
     } catch (error) {
       res.status(500).send({ message: "Error signing up user", error });
