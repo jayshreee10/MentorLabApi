@@ -4,12 +4,12 @@ import User from "../models/user_model.js";
 
 const userController = {
   signUp: async (req, res) => {
-    const { username, email, password, role, authType } = req.body;
+    const { userName, email, password, role, authType } = req.body;
 
     // Field validations
-    if (!username || !email || !password || !role || !authType) {
+    if (!userName || !email || !password || !role || !authType) {
       let message = "";
-      if (!username) message += "Username is required, ";
+      if (!userName) message += "userName is required, ";
       if (!email) message += "Email is required, ";
       if (!password) message += "Password is required, ";
       if (!role) message += "Role is required, ";
@@ -18,11 +18,11 @@ const userController = {
       return res.status(400).send({ message });
     }
 
-    // Username length should be greater than 3
-    if (username.length < 3) {
+    // userName length should be greater than 3
+    if (userName.length < 3) {
       return res
         .status(400)
-        .send({ message: "Username should be greater than 3" });
+        .send({ message: "userName should be greater than 3" });
     }
 
     // Validating email with regular expression
@@ -56,7 +56,9 @@ const userController = {
       // Check if user already exists
       const existingUser = await User.findOne({ email });
       if (existingUser) {
-        return res.status(400).send({ message: "User already exists" });
+        return res
+          .status(400)
+          .send({ message: "User already exists, Please sign in" });
       }
 
       // Hash password
@@ -64,7 +66,7 @@ const userController = {
 
       // Save to DB
       const newUser = new User({
-        username,
+        userName,
         email,
         password: hashedPassword,
         role,
@@ -75,15 +77,18 @@ const userController = {
 
       // Generate JWT token after successful signup
       const token = jwt.sign(
-        { id: newUser._id, username: newUser.username, role: newUser.role },
+        { id: newUser._id, userName: newUser.userName, role: newUser.role },
         process.env.JWT_SECRET, // Ensure you have a secret key in your environment variables
         { expiresIn: "1y" } // Token expires in 1 year
       );
 
-      res.status(201).send({
+      res.status(200).send({
         message: "User signed up successfully",
-        user: { username, email, role, authType },
         token, // Return the token
+        userName: newUser.userName,
+        email: newUser.email,
+        role: newUser.role,
+        authType: newUser.authType,
       });
     } catch (error) {
       res.status(500).send({ message: "Error signing up user", error });
@@ -104,18 +109,20 @@ const userController = {
       // Check if user exists
       const user = await User.findOne({ email });
       if (!user) {
-        return res.status(400).send({ message: "Invalid credentials" });
+        return res
+          .status(400)
+          .send({ message: "User does not exist, Please sign up" });
       }
 
       // Compare password
       const isMatch = await bcrypt.compare(password, user.password);
       if (!isMatch) {
-        return res.status(400).send({ message: "Invalid credentials" });
+        return res.status(400).send({ message: "Password is incorrect" });
       }
 
       // Generate JWT token
       const token = jwt.sign(
-        { id: user._id, username: user.username, role: user.role },
+        { id: user._id, userName: user.userName, role: user.role },
         process.env.JWT_SECRET, // Ensure you have a secret key in your environment variables
         { expiresIn: "1y" } // Token expires in 1 year
       );
@@ -123,6 +130,10 @@ const userController = {
       res.status(200).send({
         message: "User signed in successfully",
         token,
+        userName: user.userName,
+        email: user.email,
+        role: user.role,
+        authType: user.authType,
       });
     } catch (error) {
       res.status(500).send({ message: "Error signing in user", error });

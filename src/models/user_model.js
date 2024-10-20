@@ -4,17 +4,18 @@ const Schema = mongoose.Schema;
 
 const userSchema = new Schema(
   {
-    username: { type: String, required: true },
+    userName: { type: String, required: true },
     email: { type: String, required: true, unique: true },
     password: { type: String, required: true },
     role: {
       type: String,
-      enum: ["student", "instructor"],
+      enum: ["student", "teacher"],
       default: "student",
     },
     authType: {
       type: String,
       enum: ["email", "google"],
+      default: "email",
       required: true,
     },
   },

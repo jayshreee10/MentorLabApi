@@ -1,0 +1,198 @@
+{
+	"info": {
+		"_postman_id": "e29174be-bc3f-4189-bcfd-52df17e6da43",
+		"name": "MentorLab",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26303417",
+		"_collection_link": "https://warped-escape-714832.postman.co/workspace/testing-~341acf2e-1413-4a94-8181-2621732cee8c/collection/26303417-e29174be-bc3f-4189-bcfd-52df17e6da43?action=share&source=collection_link&creator=26303417"
+	},
+	"item": [
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"narayan\",\n    \"email\":\"laxminarayanreddy432@gmail.com\",\n    \"password\":\"123456\",\n    \"role\":\"student\",\n    \"authType\":\"email\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/api/auth/signup",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"narayan\",\n    \"email\":\"laxminarayanreddy432@gmail.com\",\n    \"password\":\"123456\",\n    \"role\":\"student\",\n    \"authType\":\"email\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/api/auth/signup",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create course",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\n    \"primaryLanguage\": \"english\",\n    \"welcomeMessage\": \"\\nWelcome to Mentor Lab, your gateway to limitless learning opportunities! We're excited to have you on board as part of our growing community of learners and mentors. Whether you're here to acquire new skills, deepen your expertise, or explore new passions, our platform offers a wide range of courses and resources tailored just for you. Get ready to embark on an enriching learning journey with expert instructors, flexible learning options, and a seamless user experience. At Mentor Lab, growth never stops – let's achieve great things together!\",\n    \"objectives\": \"Here are 30 words for Figma, separated by commas:\\n\\ncollaboration,design,prototyping,vector,graphics,interface,experience,real-time,feedback,components,design-systems,plugins,cloud-based,sharing,iteration,wireframing,animations,styles,assets,exporting,importing,accessibility,teamwork,editing,commenting,interaction,design-tools,layouts,templates,usability,visualization\",\n    \"category\": \"software-engineering\",\n    \"banner\": \"https://firebasestorage.googleapis.com/v0/b/mentorlab-9db1b.appspot.com/o/Screenshot%202024-10-09%20at%202.42.23%E2%80%AFPM.png?alt=media&token=e5583567-7a88-4e64-afdc-e16a9fb4e343\",\n    \"subtitle\": \"Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe culpa aut vero distinctio dolorum dicta quam quae, accusamus optio ea, similique provident repellendus repellat. Quod numquam dicta, at voluptate omnis incidunt repellat voluptatem fugiat ipsam. Sint reiciendis laboriosam odit fuga enim? Optio ipsam accusamus quia magni enim laborum explicabo a.\",\n    \"title\": \"Figma \",\n    \"description\": \"Figma is a cloud-based design tool that enables teams to create, collaborate on, and share user interface (UI) and user experience (UX) designs in real-time. Known for its intuitive interface and powerful features, Figma streamlines the design process, making it easier for designers, developers, and stakeholders to work together seamlessly.\\n\\nKey features of Figma include:\\n\\n- **Collaborative Design**: Multiple users can work on a project simultaneously, allowing for instant feedback and iterative improvements.\\n- **Vector Graphics Editing**: Figma provides robust vector editing tools, enabling designers to create scalable graphics and complex shapes with precision.\\n- **Prototyping**: Users can create interactive prototypes that simulate user interactions, helping to visualize the user journey and gather feedback before development.\\n- **Design Systems**: Figma supports the creation of design systems with reusable components, styles, and assets, ensuring consistency across projects and teams.\\n- **Plugins and Integrations**: Figma offers a wide range of plugins and integrations with other tools, enhancing its functionality and allowing for customized workflows.\\n\\nFigma is widely used in web and app design, making it an essential tool for design teams seeking to improve collaboration, speed up workflows, and create high-quality designs that align with user needs. Its accessibility across devices and platforms further strengthens its appeal in the modern design landscape.\",\n    \"level\": \"beginner\",\n    \"pricing\": \"0\",\n    \"curriculum\": [\n      {\n        \"title\": \"introduction\",\n        \"id\": \"11fc6787-ed4c-4d54-bbc6-08a0910b6ae4\",\n        \"description\": \"Figma is where teams design together. Bring ideas to life in a design, wireframe, or prototype. Partner with teammates from content creation to design implementation. Get better feedback from your stakeholders. Figma gets everyone on the same page—literally.\",\n        \"fileData\": {\n          \"url\": \"https://firebasestorage.googleapis.com/v0/b/mentorlab-9db1b.appspot.com/o/Screenshot%202024-10-09%20at%202.42.23%E2%80%AFPM.png?alt=media&token=e86f223f-2a70-4918-9308-f622eefee5a6\",\n          \"type\": \"png\"\n        },\n        \"googleForm\": \"https://docs.google.com/forms/d/e/1FAIpQLSdI0kHqphkwDGBkfx3nLdY8xCEBYHADNUqYyTUD4LbLyWkeQQ/viewform?usp=sf_link\",\n        \"youtubeLink\": \"https://youtu.be/Cx2dkpBxst8?si=mWOUBGeHd772tQT_\"\n      },\n      {\n        \"id\": \"95d55158-6a35-4646-b084-a99545f113ef\",\n        \"fileData\": {\n          \"url\": \"https://firebasestorage.googleapis.com/v0/b/mentorlab-9db1b.appspot.com/o/test.doc?alt=media&token=6f57fb6a-a390-46b8-8b34-1984af7439ff\",\n          \"type\": \"doc\"\n        },\n        \"description\": \"In this series, we walk you through Figma fundamentals while building an app. This video will cover wireframing and exploring ideas. \\nTimestamps:\\n0:00 Figma for Beginners\\n0:41 Create an Account and Team\\n1:06 Free Education account\\n1:14 Teams and Invite members\\n1:35 Wireframe an app and our app idea, Petma\\n2:05 The Editor (where you design)\\n2:30 Frames\\n3:20 Pan and Zoom\\n3:56 Creating new Layers\\n4:30 Layer's panel hierarchy\\n4:57 Add an avatar\\n5:45 Stroke and Fill\\n6:28 Alignment and text\\n7:15 Placeholder Icons (rectangles)\\n7:45 Duplicating layers\\n8:11 Group Layer\\n9:13 Components and Libraries\\n10:03 Figma Community \\n11:38 Instances\\n12:00 Constraints\\n12:40 Additional Screens\\n13:28 Copy and paste between frames\\n13:48 Iterations and feedback\\n15:28 In the next video...\\n\",\n        \"youtubeLink\": \"https://youtu.be/dXQ7IHkTiMM?si=vhs1ILqyfJo7YmCt\",\n        \"title\": \"Figma for Beginners\",\n        \"googleForm\": \"https://docs.google.com/forms/d/e/1FAIpQLSdI0kHqphkwDGBkfx3nLdY8xCEBYHADNUqYyTUD4LbLyWkeQQ/viewform?usp=sf_link\"\n      },\n      {\n        \"id\": \"5ec1956e-bd2d-4ccc-9d03-87a9e3df71bc\",\n        \"googleForm\": \"https://docs.google.com/forms/d/e/1FAIpQLSdI0kHqphkwDGBkfx3nLdY8xCEBYHADNUqYyTUD4LbLyWkeQQ/viewform?usp=sf_link\",\n        \"youtubeLink\": \"https://youtu.be/wvFd-z7jSaA?si=F8_9AXY1F-3Sh-6w\",\n        \"fileData\": {\n          \"url\": \"https://firebasestorage.googleapis.com/v0/b/mentorlab-9db1b.appspot.com/o/test.ppt?alt=media&token=ac8c024c-0b22-4792-bd74-91ceddeff561\",\n          \"type\": \"ppt\"\n        },\n        \"title\": \"Create Designs\",\n        \"description\": \"Timestamps:\\n0:00 Create Design\\n0:32 Pages and set up\\n1:24 Measuring and Layout Grids\\n2:33 Corner Radius and Place Image\\n3:40 Text properties and Styles\\n5:40 Plugins, color, and accessibility\\n7:23 Auto Layout\\n10:20 Create Components\\n11:37 Clip Content\\n12:20 Overrides\\n13:06 Vector networks and boolean operations\\n16:04 Boolean operations\\n16:38 Create a navigation bar\\n18:13 Floating Action Button (FAB)\\n19:18 Scrolling and Fix Position\\n20:53 Let's recap\"\n      },\n      {\n        \"id\": \"633dc9c8-5d8c-44e9-87cf-d3961415d6cb\",\n        \"title\": \"Prototyping\",\n        \"youtubeLink\": \"https://youtu.be/lTIeZ2ahEkQ?si=NxTEvhiqHAGyOBqJ\",\n        \"googleForm\": \"https://docs.google.com/forms/d/e/1FAIpQLSdI0kHqphkwDGBkfx3nLdY8xCEBYHADNUqYyTUD4LbLyWkeQQ/viewform?usp=sf_link\",\n        \"fileData\": {\n          \"type\": \"doc\",\n          \"url\": \"https://firebasestorage.googleapis.com/v0/b/mentorlab-9db1b.appspot.com/o/test.doc?alt=media&token=714e4a90-2aff-4c72-b0ed-d968494ef048\"\n        },\n        \"description\": \"Timestamps:\\n0:00 Prototyping\\n1:00 Create prototype connections\\n2:23 Animation\\n4:56 Feedback\\n5:58 View comments\\n6:11 Incorporate feedback\\n7:12 What We Learned\\n7:22 In the next video...\"\n      }\n    ],\n    \"courseId\": \"02604e4a-7f3a-4309-8756-3afdae6850ae\"\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/api/courses",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"courses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update course",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\n    \"curriculum\": [\n      {\n        \"youtubeLink\": \"https://www.youtube.com/watch?v=vz1RlUyrc3w&list=PLu71SKxNbfoDqgPchmvIsL4hTnJIrtige\",\n        \"googleForm\": \"https://docs.google.com/forms/d/1Tv1Hf3qMY_6m5G-tvJeEC8EVxsTwC1RB57Os6Un-kYs/viewform?edit_requested=true\",\n        \"fileData\": {\n          \"url\": \"https://firebasestorage.googleapis.com/v0/b/mentorlab-9db1b.appspot.com/o/ebin.pub_system-design-interview-an-insiders-guide-3267743538.pdf?alt=media&token=57519c0f-4f15-4023-aa7d-aef57d512079\",\n          \"type\": \"pdf\"\n        },\n        \"description\": \"React development refers to the process of building interactive and dynamic user interfaces (UIs) using React.js, a popular JavaScript library maintained by Facebook. React enables developers to create reusable UI components, which can efficiently manage the application's state and update the UI in response to changes. By leveraging a virtual DOM (Document Object Model), React ensures high performance and smooth user experiences, even in complex web applications.\\n\\nKey features of React development include:\\n\\nComponent-Based Architecture: Reusable components make it easy to build, maintain, and scale applications.\\nDeclarative Syntax: React’s declarative style allows developers to describe how the UI should look based on the current state, making code more predictable and easier to debug.\\nOne-Way Data Binding: Ensures that data flows in a single direction, improving control over the application state and minimizing errors.\\nReact Hooks: Hooks like useState, useEffect, and custom hooks enable managing state and side effects more intuitively in functional components.\\nRich Ecosystem: React integrates well with tools like Redux, React Router, and popular UI libraries like Material UI and Tailwind CSS, enhancing productivity.\\nReact development is widely used to build modern web applications, such as social media platforms, e-commerce sites, and dashboards, due to its flexibility, scalability, and performance\",\n        \"id\": \"ee0ab9a8-5943-4ecd-bd71-a4e1b8c2ccf3\",\n        \"title\": \"React JS roadmap\"\n      },\n      {\n        \"title\": \"Create react projects\",\n        \"youtubeLink\": \"https://www.youtube.com/watch?v=k3KqQvywToE&list=PLu71SKxNbfoDqgPchmvIsL4hTnJIrtige&index=2\",\n        \"id\": \"075905b8-2a23-4e09-9bb0-d17607476664\",\n        \"googleForm\": \"https://docs.google.com/forms/d/1Tv1Hf3qMY_6m5G-tvJeEC8EVxsTwC1RB57Os6Un-kYs/viewform?edit_requested=true\",\n        \"description\": \"React development refers to the process of building interactive and dynamic user interfaces (UIs) using React.js, a popular JavaScript library maintained by Facebook. React enables developers to create reusable UI components, which can efficiently manage the application's state and update the UI in response to changes. By leveraging a virtual DOM (Document Object Model), React ensures high performance and smooth user experiences, even in complex web applications.\\n\\nKey features of React development include:\\n\\nComponent-Based Architecture: Reusable components make it easy to build, maintain, and scale applications.\\nDeclarative Syntax: React’s declarative style allows developers to describe how the UI should look based on the current state, making code more predictable and easier to debug.\\nOne-Way Data Binding: Ensures that data flows in a single direction, improving control over the application state and minimizing errors.\\nReact Hooks: Hooks like useState, useEffect, and custom hooks enable managing state and side effects more intuitively in functional components.\\nRich Ecosystem: React integrates well with tools like Redux, React Router, and popular UI libraries like Material UI and Tailwind CSS, enhancing productivity.\\nReact development is widely used to build modern web applications, such as social media platforms, e-commerce sites, and dashboards, due to its flexibility, scalability, and performance\",\n        \"fileData\": {\n          \"type\": \"pdf\",\n          \"url\": \"https://firebasestorage.googleapis.com/v0/b/mentorlab-9db1b.appspot.com/o/ebin.pub_system-design-interview-an-insiders-guide-3267743538.pdf?alt=media&token=5eb79641-d7b4-4b1a-9449-668fa2f48ae6\"\n        }\n      },\n      {\n        \"googleForm\": \"https://docs.google.com/forms/d/1Tv1Hf3qMY_6m5G-tvJeEC8EVxsTwC1RB57Os6Un-kYs/viewform?edit_requested=true\",\n        \"youtubeLink\": \"https://www.youtube.com/watch?v=yNbnA5pryMg&list=PLu71SKxNbfoDqgPchmvIsL4hTnJIrtige&index=3\",\n        \"title\": \"Understand the react flow and structure\",\n        \"fileData\": {\n          \"type\": \"pdf\",\n          \"url\": \"https://firebasestorage.googleapis.com/v0/b/mentorlab-9db1b.appspot.com/o/ebin.pub_system-design-interview-an-insiders-guide-3267743538.pdf?alt=media&token=6ee492f3-217b-4713-9efd-c697f42b7956\"\n        },\n        \"description\": \"React development refers to the process of building interactive and dynamic user interfaces (UIs) using React.js, a popular JavaScript library maintained by Facebook. React enables developers to create reusable UI components, which can efficiently manage the application's state and update the UI in response to changes. By leveraging a virtual DOM (Document Object Model), React ensures high performance and smooth user experiences, even in complex web applications.\\n\\nKey features of React development include:\\n\\nComponent-Based Architecture: Reusable components make it easy to build, maintain, and scale applications.\\nDeclarative Syntax: React’s declarative style allows developers to describe how the UI should look based on the current state, making code more predictable and easier to debug.\\nOne-Way Data Binding: Ensures that data flows in a single direction, improving control over the application state and minimizing errors.\\nReact Hooks: Hooks like useState, useEffect, and custom hooks enable managing state and side effects more intuitively in functional components.\\nRich Ecosystem: React integrates well with tools like Redux, React Router, and popular UI libraries like Material UI and Tailwind CSS, enhancing productivity.\\nReact development is widely used to build modern web applications, such as social media platforms, e-commerce sites, and dashboards, due to its flexibility, scalability, and performance\",\n        \"id\": \"7e1e4ff0-c887-4427-8c08-e25c55da0b6b\"\n      },\n      {\n        \"youtubeLink\": \"https://www.youtube.com/watch?v=kAOuj6o7Kxs&list=PLu71SKxNbfoDqgPchmvIsL4hTnJIrtige&index=4\",\n        \"fileData\": {\n          \"type\": \"pdf\",\n          \"url\": \"https://firebasestorage.googleapis.com/v0/b/mentorlab-9db1b.appspot.com/o/ebin.pub_system-design-interview-an-insiders-guide-3267743538.pdf?alt=media&token=22d4e3e5-ec28-4edd-8586-c72708229c92\"\n        },\n        \"description\": \"React development refers to the process of building interactive and dynamic user interfaces (UIs) using React.js, a popular JavaScript library maintained by Facebook. React enables developers to create reusable UI components, which can efficiently manage the application's state and update the UI in response to changes. By leveraging a virtual DOM (Document Object Model), React ensures high performance and smooth user experiences, even in complex web applications.\\n\\nKey features of React development include:\\n\\nComponent-Based Architecture: Reusable components make it easy to build, maintain, and scale applications.\\nDeclarative Syntax: React’s declarative style allows developers to describe how the UI should look based on the current state, making code more predictable and easier to debug.\\nOne-Way Data Binding: Ensures that data flows in a single direction, improving control over the application state and minimizing errors.\\nReact Hooks: Hooks like useState, useEffect, and custom hooks enable managing state and side effects more intuitively in functional components.\\nRich Ecosystem: React integrates well with tools like Redux, React Router, and popular UI libraries like Material UI and Tailwind CSS, enhancing productivity.\\nReact development is widely used to build modern web applications, such as social media platforms, e-commerce sites, and dashboards, due to its flexibility, scalability, and performance\",\n        \"title\": \"Create your own react library and JSX\",\n        \"id\": \"e544ff80-cf01-43d2-815b-f544d2ac929c\",\n        \"googleForm\": \"https://docs.google.com/forms/d/1Tv1Hf3qMY_6m5G-tvJeEC8EVxsTwC1RB57Os6Un-kYs/viewform?edit_requested=true\"\n      },\n      {\n        \"fileData\": {\n          \"url\": \"https://firebasestorage.googleapis.com/v0/b/mentorlab-9db1b.appspot.com/o/ebin.pub_system-design-interview-an-insiders-guide-3267743538.pdf?alt=media&token=827f5a4f-dd11-4e55-9a72-87739bf0391e\",\n          \"type\": \"pdf\"\n        },\n        \"description\": \"React development refers to the process of building interactive and dynamic user interfaces (UIs) using React.js, a popular JavaScript library maintained by Facebook. React enables developers to create reusable UI components, which can efficiently manage the application's state and update the UI in response to changes. By leveraging a virtual DOM (Document Object Model), React ensures high performance and smooth user experiences, even in complex web applications.\\n\\nKey features of React development include:\\n\\nComponent-Based Architecture: Reusable components make it easy to build, maintain, and scale applications.\\nDeclarative Syntax: React’s declarative style allows developers to describe how the UI should look based on the current state, making code more predictable and easier to debug.\\nOne-Way Data Binding: Ensures that data flows in a single direction, improving control over the application state and minimizing errors.\\nReact Hooks: Hooks like useState, useEffect, and custom hooks enable managing state and side effects more intuitively in functional components.\\nRich Ecosystem: React integrates well with tools like Redux, React Router, and popular UI libraries like Material UI and Tailwind CSS, enhancing productivity.\\nReact development is widely used to build modern web applications, such as social media platforms, e-commerce sites, and dashboards, due to its flexibility, scalability, and performance\",\n        \"youtubeLink\": \"https://www.youtube.com/watch?v=lI7IIOWM0Mo&list=PLu71SKxNbfoDqgPchmvIsL4hTnJIrtige&index=5\",\n        \"id\": \"713919bb-76a6-4184-aced-9a6d3b93e852\",\n        \"googleForm\": \"https://docs.google.com/forms/d/1Tv1Hf3qMY_6m5G-tvJeEC8EVxsTwC1RB57Os6Un-kYs/viewform?edit_requested=true\",\n        \"title\": \"Why you need hooks and project\"\n      }\n    ],\n    \"welcomeMessage\": \"Welcome to the React Development Course! 🚀\\n\\nWe’re thrilled to have you embark on this exciting journey with us, where you’ll dive deep into the world of React. Whether you’re just getting started or looking to fine-tune your skills, this course is designed to equip you with everything you need to build powerful, efficient, and scalable web applications.\\n\\nThroughout the course, you’ll not only learn the ins and outs of React but also gain hands-on experience through coding exercises and projects that mirror real-world scenarios. Our goal is to make sure that by the end of this course, you’re ready to tackle any React challenge confidently and build applications that stand out in the modern web landscape.\\n\\nWe encourage you to actively participate, ask questions, and collaborate with your fellow learners as you progress through the lessons. React is not just a tool—it’s a mindset, and we’re here to guide you every step of the way. Let’s build something amazing together!\\n\\nHappy coding, and welcome to the React community! 💻✨\\n\\nThis framework gives learners a clear understanding of what to expect, the skills they will gain, and sets a welcoming tone for an engaging learning experience.\",\n    \"pricing\": \"120\",\n    \"subtitle\": \"full stack dev\",\n    \"description\": \"The React Development Course is designed to provide developers with a comprehensive understanding of React, one of the most powerful and popular JavaScript libraries for building modern user interfaces. Whether you’re a beginner or an experienced developer looking to sharpen your React skills, this course will guide you through the fundamentals and advanced concepts of React, including JSX, state management, hooks, routing, and performance optimization.\\n\\nYou’ll gain hands-on experience by building real-world applications, learning best practices, and mastering techniques to create scalable, maintainable, and high-performance React applications. By the end of the course, you will have the confidence to tackle any React project, from small single-page apps to complex, feature-rich web applications.\",\n    \"title\": \"React development xoxo \",\n    \"category\": \"web-development\",\n    \"banner\": \"https://firebasestorage.googleapis.com/v0/b/mentorlab-9db1b.appspot.com/o/premium_photo-1678565999332-1cde462f7b24.avif?alt=media&token=40a07c0b-05a6-4f4c-a0ae-fb43b6617292\",\n    \"courseId\": \"e877b038-f60d-440d-9e59-5aad83f46182\",\n    \"primaryLanguage\": \"english\",\n    \"objectives\": \"Understand React Fundamentals: Learn the core principles of React, including JSX, components, props, and state, Build Interactive User Interfaces: Develop dynamic and responsive interfaces using component-based architecture, Master Hooks: Gain in-depth knowledge of React Hooks like useState, useEffect, and custom hooks for managing state and side effects, State Management: Explore different state management solutions, including React’s Context API and third-party libraries like Redux, React Router: Implement client-side routing in your applications with react-router-dom for seamless navigation between pages, Handle Asynchronous Data: Work with APIs and manage data using fetch, axios, and React’s built-in mechanisms for handling asynchronous tasks, Optimize Performance: Learn performance optimization techniques, including lazy loading, memoization\\n\",\n    \"level\": \"beginner\"\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/api/courses/e877b038-f60d-440d-9e59-5aad83f46182",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"courses",
+						"e877b038-f60d-440d-9e59-5aad83f46182"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get course",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3001/api/courses/e877b038-f60d-440d-9e59-5aad83f46182",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"courses",
+						"e877b038-f60d-440d-9e59-5aad83f46182"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get courses",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MTM4NmQ3MWQ4YTlmMGIzZWVkOWJlNiIsInVzZXJuYW1lIjoibmFyYXlhbiIsInJvbGUiOiJzdHVkZW50IiwiaWF0IjoxNzI5MzMzMDU5LCJleHAiOjE3NjA4OTA2NTl9.6yWWfs3r7dLGi3iIIZCcbLqCj3ECiy9vocY_HFm7Z5U",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3001/api/courses",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"courses"
+					],
+					"query": [
+						{
+							"key": "authorization",
+							"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MTM4NmQ3MWQ4YTlmMGIzZWVkOWJlNiIsInVzZXJuYW1lIjoibmFyYXlhbiIsInJvbGUiOiJzdHVkZW50IiwiaWF0IjoxNzI5MzMzMDU5LCJleHAiOjE3NjA4OTA2NTl9.6yWWfs3r7dLGi3iIIZCcbLqCj3ECiy9vocY_HFm7Z5U",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete course",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3001/api/courses/e877b038-f60d-440d-9e59-5aad83f46182",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"courses",
+						"e877b038-f60d-440d-9e59-5aad83f46182"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

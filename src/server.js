@@ -1,3 +1,4 @@
+import cors from "cors";
 import "dotenv/config";
 import express from "express";
 import mongoose from "mongoose";
@@ -12,6 +13,8 @@ async function mainServer() {
 
   // Middleware to parse the request body as JSON
   app.use(express.json());
+  // Middleware to enable CORS
+  app.use(cors());
 
   // Register the routers for the app
   app.use(courseRouter.path, courseRouter);
