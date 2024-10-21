@@ -1,119 +1,113 @@
 # MentorLab Server
 
-MentorLab Server is the backend service for the **MentorLab** Learning Management System (LMS). It is built using **Node.js**, **Express.js**, and **MongoDB**, providing RESTful APIs for user authentication, course management, and content delivery.
+The **MentorLab Server** provides the backend services for the MentorLab Learning Management System (LMS). It handles user authentication, course management, and API endpoints for both instructors and students.
 
-## ⚡️ Features
+## ⚙️ Tech Stack
 
-- **User Authentication**: JWT-based authentication for secure login and signup.
-- **Course Management**: APIs to create, update, and manage courses for instructors.
-- **Middleware**: Authentication middleware to protect routes.
-- **MongoDB Integration**: Mongoose models for efficient data handling of users and courses.
+The server is built using:
+
+- **Node.js**: Runtime environment.
+- **Express.js**: Web framework for building the REST API.
+- **MongoDB**: NoSQL database for storing user and course information.
+- **JWT (JSON Web Tokens)**: Used for secure authentication.
 
 ## 📁 Folder Structure
 
-Here’s the folder structure of the `MentorLab Server` project:
+Here is the directory structure of the MentorLab Server:
 
 ```sh
 src
 ├── controllers
-│   ├── course_controllers.js   # Handles course-related operations (create, update, delete).
-│   └── user_controller.js      # Manages user-related operations (login, signup).
+│   ├── course_controllers.js   # Handles course-related operations (create, update, delete)
+│   └── user_controller.js      # Handles user-related operations (register, login, update)
 ├── middlewares
-│   └── auth_middleware.js      # Middleware for protecting routes, ensuring users are authenticated.
+│   └── auth_middleware.js      # Middleware for JWT token authentication
 ├── models
-│   ├── course_model.js         # Mongoose schema and model for courses.
-│   └── user_model.js           # Mongoose schema and model for users.
+│   ├── course_model.js         # Mongoose schema for course data
+│   └── user_model.js           # Mongoose schema for user data
 ├── routes
-│   ├── auth_routes.js          # Routes for user authentication (login, signup).
-│   └── course_routes.js        # Routes for managing course operations.
-└── server.js                   # Entry point of the server, sets up the Express app and connects to MongoDB.
+│   ├── auth_routes.js          # Routes for user authentication (register, login)
+│   └── course_routes.js        # Routes for course CRUD operations
+└── server.js                   # Entry point for the Express server
 ```
 
-## ⚙️ Installation and Setup
+## 🚀 Deployment
 
-To set up and run the **MentorLab Server**, follow these steps:
+The APIs are deployed using **Render** at: [https://dashboard.render.com](https://dashboard.render.com).
 
-1. **Clone the repository**:
+To deploy the server on Render, follow these steps:
+
+1. Push your code to GitHub.
+2. Connect your Render account to your GitHub repository.
+3. Create a new **Web Service** on Render and follow the setup instructions.
+4. Add your environment variables in the Render dashboard for database connection and JWT secrets.
+
+## 🧪 API Testing
+
+For testing the API endpoints, a Postman collection is provided:
+
+- **Postman Collection**: `MentorLab.postman_collection.json`
+
+You can import this collection into Postman to easily test all the available APIs.
+
+## 🔐 Authentication
+
+The server uses **JWT** for authentication. Each protected route requires a valid token, which is generated upon user login. The `auth_middleware.js` ensures that only authenticated users can access certain routes.
+
+## 📚 API Endpoints
+
+### User Authentication
+
+- `POST /auth/register`: Register a new user (instructor/student).
+- `POST /auth/login`: Login to receive a JWT token.
+
+### Course Management
+
+- `POST /courses`: Create a new course (instructor only).
+- `GET /courses`: Get all available courses.
+- `PUT /courses/:id`: Update an existing course (instructor only).
+- `DELETE /courses/:id`: Delete a course (instructor only).
+
+## 🛠️ Installation and Setup
+
+To run the server locally, follow these steps:
+
+1. **Clone the Repository**:
 
    ```bash
    git clone https://github.com/jayshreee10/MentorLabApi.git
    cd MentorLabApi
    ```
 
-2. **Set up environment variables**:
-
-   Create a `.env` file in the root of the project with the following details:
-
-   ```
-   MONGO_URI=<Your MongoDB Connection String>
-   JWT_SECRET=<Your JWT Secret Key>
-   ```
-
-3. **Install dependencies**:
+2. **Install Dependencies**:
 
    ```bash
    npm install
    ```
 
-4. **Run the server**:
+3. **Set Up Environment Variables**:
 
-   Start the server in development mode:
+   Create a `.env` file in the root directory and add the following variables:
 
    ```bash
-   npm run dev
+   MONGO_URI=<your-mongodb-connection-string>
+   JWT_SECRET=<your-jwt-secret>
    ```
 
-   The server will start on `http://localhost:3001` by default.
-
-5. **Production build**:
-
-   To run the server in production:
+4. **Start the Server**:
 
    ```bash
    npm start
    ```
 
-## 📋 API Endpoints
+   The server will run on `http://localhost:5000`.
 
-Here are the available API routes for **MentorLab Server**:
+## 📅 Roadmap
 
-### **Authentication Routes** (`/api/auth`)
+- [ ] Add more detailed logging for debugging.
+- [ ] Implement course purchase and payment integration.
+- [ ] Enhance security with rate limiting and input validation.
 
-- `POST /signup` - Register a new user.
-- `POST /login` - Authenticate a user and generate a JWT token.
-
-### **Course Routes** (`/api/courses`)
-
-- `GET /` - Get a list of all courses.
-- `POST /create` - Create a new course (Instructor only).
-- `PUT /:courseId` - Update course details (Instructor only).
-- `DELETE /:courseId` - Delete a course (Instructor only).
-
-## 🌱 Third-Party Libraries
-
-- **[Express.js](https://expressjs.com/)**: Web framework for building APIs.
-- **[Mongoose](https://mongoosejs.com/)**: ODM for MongoDB to handle data models.
-- **[JWT](https://jwt.io/)**: JSON Web Token for authentication.
-- **[dotenv](https://github.com/motdotla/dotenv)**: Loads environment variables from `.env`.
-
-## 🚀 Roadmap
-
-Future improvements and features:
-
-- [] Role-based access control for advanced permissions.
-- [] Enhanced course search functionality.
-- [] Analytics for instructors (course performance, student engagement).
-- [] Integration with third-party services (payments, notifications).
-
-## 👨‍💻 Author
+## 👤 Author
 
 - **Jayshree Sadangi** - [@Jayshree10](https://github.com/jayshreee10)
-
-## ⭐️ Contributing
-
-Contributions are welcome! To contribute:
-
-1. Fork this repository.
-2. Create a new branch (`feature-branch`).
-3. Commit your changes.
-4. Push to your branch and create a pull request.
