@@ -8,7 +8,7 @@ courseRouter.path = "/api/courses";
 
 // Protect the routes with the authMiddleware
 courseRouter.get("/", authMiddleware, courseController.getAllCourses);
-courseRouter.get("/price", authMiddleware, courseController.getCoursesByPrice);
+courseRouter.get("/?sort", authMiddleware, courseController.getCoursesByPrice);
 courseRouter.get("/:id", authMiddleware, courseController.getCourse);
 courseRouter.post("/", authMiddleware, courseController.postCourse);
 courseRouter.put("/:id", authMiddleware, courseController.putCourse);
