@@ -121,31 +121,6 @@ const courseController = {
       res.status(500).json({ message: "Error deleting course", error });
     }
   },
-
-  // Get courses sorted by price
-  getCoursesByPrice: async (req, res) => {
-    try {
-      const { sort } = req.query; // "asc" for low to high, "desc" for high to low
-
-      // Validate sort parameter
-      if (sort !== "asc" && sort !== "desc") {
-        return res
-          .status(400)
-          .json({ message: "Invalid sort parameter. Use 'asc' or 'desc'." });
-      }
-
-      // Fetch courses sorted by pricing
-      const courses = await Course.find().sort({
-        pricing: sort === "asc" ? 1 : -1,
-      });
-
-      res.status(200).json(courses);
-    } catch (error) {
-      res
-        .status(500)
-        .json({ message: "Error fetching courses by price", error });
-    }
-  },
 };
 
 export default courseController;
