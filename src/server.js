@@ -9,7 +9,7 @@ mainServer(); //server start point
 
 async function mainServer() {
   const app = express();
-  const PORT = process.env.PORT || 3001;
+  const PORT = process.env.PORT || 5001;
 
   // Middleware to parse the request body as JSON
   app.use(express.json());
