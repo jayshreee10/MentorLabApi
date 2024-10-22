@@ -8,17 +8,16 @@ import courseRouter from "./routes/course_routes.js";
 mainServer(); //server start point
 
 async function mainServer() {
-  const app = express(); // Create an Express app
-  const PORT = process.env.PORT || 3001; // Set the port
+  const app = express();
+  const PORT = process.env.PORT || 3001;
 
   // Middleware to parse the request body as JSON
   app.use(express.json());
-  // Middleware to enable CORS
   app.use(cors());
 
   // Register the routers for the app
-  app.use(courseRouter.path, courseRouter);
   app.use(authRouter.path, authRouter);
+  app.use(courseRouter.path, courseRouter);
 
   // Connect to MongoDB
   mongoose

@@ -43,6 +43,7 @@ const courseController = {
         objectives,
         level,
         curriculum,
+        createdBy,
       } = req.body;
 
       // Check if the course already exists
@@ -67,6 +68,7 @@ const courseController = {
         objectives,
         level,
         curriculum,
+        createdBy,
       });
       await newCourse.save();
 

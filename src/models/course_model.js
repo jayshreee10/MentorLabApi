@@ -28,6 +28,7 @@ const courseSchema = new Schema(
     objectives: { type: String, required: true },
     level: { type: String, required: true },
     curriculum: [curriculumItemSchema],
+    createdBy: { type: String },
   },
   { timestamps: true }
 );
