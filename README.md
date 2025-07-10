@@ -1,4 +1,4 @@
-# MentorLab Server
+# MentorLab Server 
 
 The **MentorLab Server** provides the backend services for the MentorLab Learning Management System (LMS). It handles user authentication, course management, and API endpoints for both instructors and students.
 
